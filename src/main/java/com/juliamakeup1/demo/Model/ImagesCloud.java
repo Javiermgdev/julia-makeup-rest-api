@@ -6,21 +6,16 @@ import lombok.Setter;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import java.util.Date;
-
 @Getter
 @Setter
 @NoArgsConstructor
-@Document(collection = "ClientForms")
-public class ClientForm {
+@Document(collection = "imagesCloud")
+public class ImagesCloud {
 
-    private String nameClient;
+        @Id
+        private String idImagesCloud;
+        private String nameImagesCloud;
+        private String linkImagesCloud;
 
-    private int phoneNumberClient;
+    }
 
-    private Date dateMakeUpClient;
-
-    @Id
-    private String idClient;
-
-}
