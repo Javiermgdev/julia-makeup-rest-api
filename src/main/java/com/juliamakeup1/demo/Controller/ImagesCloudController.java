@@ -64,7 +64,7 @@ public class ImagesCloudController {
 
         BufferedImage bufferedImage = ImageIO.read(file.getInputStream());
         if(bufferedImage == null){
-            return new ResponseEntity(new ImagesCloudDto("Invalid Image"), HttpStatus.BAD_REQUEST);
+            return new ResponseEntity(new ImagesCloudDto("Invalid Image "), HttpStatus.BAD_REQUEST);
         }
         Map result = cloudinaryServiceImplementation.upload(file);
 
